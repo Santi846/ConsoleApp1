@@ -41,13 +41,15 @@ var secondNum = int.Parse(secondNumString!);
 
 if (operation == "+")
 {
-    var sum = firstNum + secondNum;
-    Console.WriteLine($"El resultado de la suma es: {sum}");
+    var FirstSum = firstNum;
+    FirstSum += secondNum;
+    Console.WriteLine($"El resultado de la suma es: {FirstSum}");
 }
 else if (operation == "-")
 {
-    var resta = firstNum - secondNum;
-    Console.WriteLine($"El resultado de la resta es: {resta}");
+    var FirstResta = firstNum;
+    FirstResta -= secondNum;
+    Console.WriteLine($"El resultado de la resta es: {FirstResta}");
 }
 else if (operation == "*")
 {
