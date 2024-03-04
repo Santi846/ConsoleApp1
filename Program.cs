@@ -38,30 +38,34 @@ Console.WriteLine("Realizaremos una operacion, por favor ingrese su segundo nume
 var secondNumString = Console.ReadLine();
 var secondNum = int.Parse(secondNumString!);
 
-
-if (operation == "+")
+if (operation == "+" && operation != null)
 {
     var FirstSum = firstNum;
     FirstSum += secondNum;
     Console.WriteLine($"El resultado de la suma es: {FirstSum}");
+    return;
 }
-else if (operation == "-")
+else if (operation == "-" && operation != null)
 {
     var FirstResta = firstNum;
     FirstResta -= secondNum;
     Console.WriteLine($"El resultado de la resta es: {FirstResta}");
+    return;
 }
-else if (operation == "*")
+else if (operation == "*" && operation != null)
 {
     var multiplicacion = firstNum * secondNum;
     Console.WriteLine($"El resultado de la multiplicacion es: {multiplicacion}");
+    return;
 }
-else if (operation == "/")
+else if (operation == "/" && operation != null)
 {
     var division = firstNum / secondNum;
     Console.WriteLine($"El resultado de la division es: {division}");
+    return;
 }
 else
 {
-    Console.WriteLine("Error");
+    Console.WriteLine("You enter a null character, type one plis");
+    return;
 }
