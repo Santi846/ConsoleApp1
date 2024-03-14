@@ -26,57 +26,91 @@ using System.Text.RegularExpressions;
 //const int mate = 1;
 //Console.WriteLine("Mi edad es: " + edad + "y mi primer numero es el: " + firstNum + "mi segundo numero es el:" + secondNum + " canto el numero:" + thirdNum);
 //Console.WriteLine("Mi nombre es: " + nombre + ", y estoy tomando " + mate + " mate");
-
-Console.WriteLine("How many operations you wish to perform: ");
-int counting_operations = int.Parse(Console.ReadLine());
-if (counting_operations != null)
+void operateFunction()
 {
-    for (int i = 0; i < counting_operations; i++)
+    Console.WriteLine("How many operations you wish to perform: ");
+    int counting_operations = int.Parse(Console.ReadLine());
+    if (counting_operations != null)
     {
-        Console.WriteLine("What operation would you like to perform: ");
-        var operation = Console.ReadLine();
+        for (int i = 0; i < counting_operations; i++)
+        {   
+            Console.WriteLine("What operation would you like to perform: ");
+            var operation = Console.ReadLine();
 
-        Console.WriteLine(" will perform an operation, please enter your first number: ");
-        var firstNumString = Console.ReadLine();
-        var firstNum = int.Parse(firstNumString!);
+            if (operation == "+" && operation != null)
+            {
+                Console.WriteLine("We will perform an operation, please enter your first number: ");
+                var firstNumString = Console.ReadLine();
+                var firstNum = int.Parse(firstNumString!);
 
-        Console.WriteLine("We will perform an operation, please enter your second number: ");
-        var secondNumString = Console.ReadLine();
-        var secondNum = int.Parse(secondNumString!);
+                Console.WriteLine("We will perform an operation, please enter your second number: ");
+                var secondNumString = Console.ReadLine();
+                var secondNum = int.Parse(secondNumString!);
 
-        if (operation == "+" && operation != null)
-        {
-            var FirstSum = firstNum;
-            FirstSum += secondNum;
-            Console.WriteLine($"The sum result is: {FirstSum}");
-            //return;
-        }
-        else if (operation == "-" && operation != null)
-        {
-            var FirstResta = firstNum;
-            FirstResta -= secondNum;
-            Console.WriteLine($"The subtract result is: {FirstResta}");
-            //return;
-        }
-        else if (operation == "*" && operation != null)
-        {
-            var multiplicacion = firstNum * secondNum;
-            Console.WriteLine($"The multiplication result is: {multiplicacion}");
-            //return;
-        }
-        else if (operation == "/" && operation != null)
-        {
-            var division = firstNum / secondNum;
-            Console.WriteLine($"The division result is: {division}");
-            //return;
-        }
-        else
-        {
-            Console.WriteLine("You've entered a null character, type one plis");
-            //return;
+                var FirstSum = firstNum;
+                FirstSum += secondNum;
+                Console.WriteLine($"The sum result is: {FirstSum}");
+            }
+            else if (operation == "-" && operation != null)
+            {
+                Console.WriteLine("We will perform an operation, please enter your first number: ");
+                var firstNumString = Console.ReadLine();
+                var firstNum = int.Parse(firstNumString!);
+
+                Console.WriteLine("We will perform an operation, please enter your second number: ");
+                var secondNumString = Console.ReadLine();
+                var secondNum = int.Parse(secondNumString!);
+
+                var FirstResta = firstNum;
+                FirstResta -= secondNum;
+                Console.WriteLine($"The subtract result is: {FirstResta}");
+                
+            }
+            else if (operation == "*" && operation != null)
+            {
+                Console.WriteLine("We will perform an operation, please enter your first number: ");
+                var firstNumString = Console.ReadLine();
+                var firstNum = int.Parse(firstNumString!);
+
+                Console.WriteLine("We will perform an operation, please enter your second number: ");
+                var secondNumString = Console.ReadLine();
+                var secondNum = int.Parse(secondNumString!);
+
+                var multiplicacion = firstNum * secondNum;
+                Console.WriteLine($"The multiplication result is: {multiplicacion}");
+                
+            }
+            else if (operation == "/" && operation != null)
+            {
+                Console.WriteLine("We will perform an operation, please enter your first number: ");
+                var firstNumString = Console.ReadLine();
+                var firstNum = int.Parse(firstNumString!);
+
+                Console.WriteLine("We will perform an operation, please enter your second number: ");
+                var secondNumString = Console.ReadLine();
+                var secondNum = int.Parse(secondNumString!);
+
+                var division = firstNum / secondNum;
+                Console.WriteLine($"The division result is: {division}");
+                
+            }
+            else
+            {
+                Console.WriteLine("You've entered a null character, type one plis");
+                
+            }
+
+            
+
+            
         }
     }
-}
+    else
+    {
+        Console.WriteLine("You've entered a null character, type one number plis");
+        
+    }
 
+};
 
-
+operateFunction();
