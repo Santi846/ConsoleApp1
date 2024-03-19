@@ -29,7 +29,7 @@ namespace ConsoleApp1
         //methor for returning that constructor built
         public string GetDescription()
         {
-            return $"Book {_name} by {_author}";
+            return $"The book is {_name} by {_author}, it's about {_description} and it has {_amount_pages}";
         }
     }
 }

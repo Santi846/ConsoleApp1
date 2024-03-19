@@ -1,6 +1,7 @@
 ﻿//iterate a list
 //implicit variable decalaration
 using System.Text.RegularExpressions;
+using ConsoleApp1;
 
 //var names = new[] { "Santi", "Felipe", "Emillia" };
 
@@ -28,6 +29,8 @@ using System.Text.RegularExpressions;
 //Console.WriteLine("Mi nombre es: " + nombre + ", y estoy tomando " + mate + " mate");
 void operateFunction()
 {
+    
+
     Console.WriteLine("How many operations you wish to perform: ");
     int counting_operations = int.Parse(Console.ReadLine());
     if (counting_operations != null)
@@ -113,4 +116,31 @@ void operateFunction()
 
 };
 
-operateFunction();
+void instancingClass() {
+
+    Console.WriteLine("How many books you will enter? ");
+    int countingBooks = int.Parse(Console.ReadLine());
+
+    for (int i = 0; i < countingBooks; i++)
+    {
+        Console.WriteLine("Book name: ");
+        var instanceName = Console.ReadLine();
+
+        Console.WriteLine("Who is the author?");
+        var instanceAuthor = Console.ReadLine();
+
+        Console.WriteLine("Which is the description?");
+        var instanceDescription = Console.ReadLine();
+
+        Console.WriteLine("How many pages it has?");
+        int instancePages = int.Parse(Console.ReadLine());
+
+        Book BookInstance = new Book(instanceName, instanceAuthor, instanceDescription, instancePages);
+
+        Console.WriteLine(BookInstance.GetDescription());
+    }
+
+};
+
+//operateFunction();
+instancingClass();
